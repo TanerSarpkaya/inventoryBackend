@@ -25,6 +25,7 @@ public class ModelMapperConfig {
     private static final Converter<Bolt, BoltResponseDTO> BOLT_BOLT_RESPONSE_DTO_CONVERTER = mappingContext -> {
       BoltResponseDTO boltResponseDTO = new BoltResponseDTO();
       Bolt bolt = mappingContext.getSource();
+        boltResponseDTO.setId(bolt.getId());
         boltResponseDTO.setName(bolt.getName());
         boltResponseDTO.setType(bolt.getType());
         boltResponseDTO.setLength(bolt.getLength());
